@@ -25,11 +25,6 @@ pipeline {
                 sh 'docker push ubedev/go-jenkinstest:$BUILD_NUMBER'
             }
          }
-         stage('Triggering Step-Deployment') {
-            steps {  
-                build job: 'Step-Deployment', parameters: [string(name: 'BUILDNUMBER', value: env.BUILD_NUMBER)]
-            }
-         }
    }
     post {
 		always {
