@@ -8,8 +8,8 @@ import (
 func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Server from V1!")
+		fmt.Fprintln(w, "Server 2!")
 	})
 
-	http.ListenAndServe(":8081", nil)
+	http.ListenAndServe(":8082", nil)
 }
